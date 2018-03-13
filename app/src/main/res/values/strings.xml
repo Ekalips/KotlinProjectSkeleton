@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Skeleton</string>
+
+    <string name="server_error">Server error</string>
+    <string name="malformed_json">Malformed server response</string>
+    <string name="unable_to_communicate_to_server">Unable to communicate to server</string>
+    <string name="no_internet_connection">No internet connection</string>
+</resources>
