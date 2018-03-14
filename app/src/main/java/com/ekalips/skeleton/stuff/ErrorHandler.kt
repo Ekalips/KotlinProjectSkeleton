@@ -50,6 +50,9 @@ class ErrorHandler @Inject constructor(private val toastProvider: ToastProvider)
 }
 
 
-class InsignificantError : RuntimeException()
+class InsignificantError : RuntimeException {
+    constructor(cause: Throwable) : super(cause)
+    constructor() : super()
+}
 
 class ServerError(val code: Int) : RuntimeException("Unexpected server error with code: $code")
