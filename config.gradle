@@ -1,11 +1,7 @@
 ext {
-    localServerAddress = "http://10.0.1.139:7007/"
-    globalServerAddress = "http://91.218.99.198:7007/"
-
     appCompatVersion = "27.1.0"
     rxJavaVersion = "2.1.9"
     rxAndroidVersion = "2.0.1"
     daggerVersion = "2.14.1"
     archComponentsVersion = "1.1.0"
-
 }
