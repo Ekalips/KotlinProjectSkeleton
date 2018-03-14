@@ -43,6 +43,3 @@ dependencies {
 
     implementation "android.arch.lifecycle:extensions:$archComponentsVersion"
 }
-
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'

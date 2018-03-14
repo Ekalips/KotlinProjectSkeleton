@@ -9,7 +9,7 @@ import com.ekalips.base.vm.BaseViewModel
 import com.ekalips.base.vm.SingleLiveEvent
 
 
-abstract class GHViewModel<out ViewState : BaseViewState> : BaseViewModel<ViewState>() {
+abstract class SkeletonViewModel<out ViewState : BaseViewState> : BaseViewModel<ViewState>() {
 
     val navigationTrigger = SingleLiveEvent<Navigate>()
     protected val lock = Any()

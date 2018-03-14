@@ -13,7 +13,7 @@ import javax.inject.Inject
 /**
  * Created by Ekalips on 2/7/18.
  */
-abstract class GHActivity<VM : GHViewModel<BaseViewState>, DataBinding : ViewDataBinding> : BaseActivity<VM, DataBinding>() {
+abstract class SkeletonActivity<VM : SkeletonViewModel<BaseViewState>, DataBinding : ViewDataBinding> : BaseActivity<VM, DataBinding>() {
 
     @Inject
     lateinit var navigator: GlobalNavigationProvider

@@ -10,7 +10,7 @@ import com.ekalips.base.state.BaseViewState
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 
-abstract class GHDialogFragment<VM : GHViewModel<BaseViewState>, ParentVM : GHViewModel<BaseViewState>, DataBinding : ViewDataBinding> : BaseDialogFragment<VM, ParentVM, DataBinding>() {
+abstract class SkeletonDialogFragment<VM : SkeletonViewModel<BaseViewState>, ParentVM : SkeletonViewModel<BaseViewState>, DataBinding : ViewDataBinding> : BaseDialogFragment<VM, ParentVM, DataBinding>() {
 
     @Inject
     lateinit var navigator: GlobalNavigationProvider
