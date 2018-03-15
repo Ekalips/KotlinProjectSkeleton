@@ -61,33 +61,34 @@ class RxUtils {
             }
         }
 
-        fun <T> Observable<T>.wrap(): Observable<T> {
-            return compose(RxUtils.applyObservalbeIOSchedulers())
-        }
-
-        fun <T> Single<T>.wrap(): Single<T> {
-            return compose(RxUtils.applySignleIOSchedulers())
-        }
-
-        fun Completable.wrap(): Completable {
-            return compose(RxUtils.applyCompletableIOSchedulers())
-        }
-
-        fun <T> Observable<T>.wrap(errorHandler: ((Throwable) -> Boolean)): Observable<T> {
-            return wrap()
-                    .compose(RxUtils.throwOrWrapObservable(errorHandler))
-        }
-
-        fun <T> Single<T>.wrap(errorHandler: (Throwable) -> Boolean): Single<T> {
-            return wrap()
-                    .compose(RxUtils.throwOrWrapSingle(errorHandler))
-        }
-
-        fun Completable.wrap(errorHandler: (Throwable) -> Boolean): Completable {
-            return wrap()
-                    .compose(RxUtils.throwOrWrapCompletable(errorHandler))
-        }
-
     }
 
+}
+
+
+fun <T> Observable<T>.wrap(): Observable<T> {
+    return compose(RxUtils.applyObservalbeIOSchedulers())
+}
+
+fun <T> Single<T>.wrap(): Single<T> {
+    return compose(RxUtils.applySignleIOSchedulers())
+}
+
+fun Completable.wrap(): Completable {
+    return compose(RxUtils.applyCompletableIOSchedulers())
+}
+
+fun <T> Observable<T>.wrap(errorHandler: ((Throwable) -> Boolean)): Observable<T> {
+    return wrap()
+            .compose(RxUtils.throwOrWrapObservable(errorHandler))
+}
+
+fun <T> Single<T>.wrap(errorHandler: (Throwable) -> Boolean): Single<T> {
+    return wrap()
+            .compose(RxUtils.throwOrWrapSingle(errorHandler))
+}
+
+fun Completable.wrap(errorHandler: (Throwable) -> Boolean): Completable {
+    return wrap()
+            .compose(RxUtils.throwOrWrapCompletable(errorHandler))
 }
