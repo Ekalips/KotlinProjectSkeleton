@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.os.Bundle
+import android.view.MenuItem
 import com.ekalips.base.providers.ToastProvider
 import com.ekalips.base.state.BaseViewState
 import com.ekalips.base.vm.BaseViewModel
@@ -44,6 +45,13 @@ abstract class BaseActivity<VM : BaseViewModel<BaseViewState>, DataBinding : Vie
         binding?.setLifecycleOwner(this)
         viewModel.state.toast.observe(this, Observer { it?.let { toastProvider.showToast(it) } })
         viewModel.state.back.observe(this, Observer { onBackPressed() })
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            android.R.id.home -> onBackPressed()
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onStart() {
